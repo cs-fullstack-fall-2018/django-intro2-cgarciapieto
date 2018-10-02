@@ -17,10 +17,10 @@ def times2(request, number1):
 
     return HttpResponse((response , number1*2))
 
-def sumofNumber(request):
 
-    a = range(100)
-    b = sum(a)
-
-    return HttpResponse(b)
-
+def sumofNumber(request, number):
+    sumnum = 0
+    for x in range(0, number):
+        print(x)
+    sumnum += x
+    return HttpResponse("the sum is ", " ", sumnum)
